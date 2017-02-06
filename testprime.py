@@ -1,4 +1,4 @@
-"""A collection of test cases that checks if the program is working well"""
+"""A collection of test cas--es that checks if the program is working well"""
 import unittest
 from prime import primenum
 
@@ -19,8 +19,8 @@ class TestPrime(unittest.TestCase):
         with self.assertRaises(TypeError):
             primenum([])
 
-    def test_if_it_accepts_lists(self):
-        """Test if list datatype is accepted"""
+    def test_if_it_accepts_float_numbers_are_accepted(self):
+        """Test if the function raises an error if float number is given"""
         with self.assertRaises(TypeError):
             primenum(56.58)
 
@@ -44,12 +44,12 @@ class TestPrime(unittest.TestCase):
     	"""Tests if it outputs correct result"""
     	self.assertEquals(len(primenum(55)), 16)
 
-    def test_if_it_includes_a_number_i(self):
+    def test_if_it_includes_a_number_included_in_list(self):
     	"""Tests if a number is prime is included in the list"""
     	self.assertIn(5, primenum(5))
 
     def test_if_it_includes_a_number_if_the_number_is(self):
-    	"""Tests the input number is prime is included in the list"""
+    	"""Tests the input number is not prime is included in the list"""
     	self.assertNotIn(16, primenum(16))
 
 
