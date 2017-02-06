@@ -20,37 +20,38 @@ class TestPrime(unittest.TestCase):
             primenum([])
 
     def test_if_it_accepts_float_numbers_are_accepted(self):
-        """Test if the function raises an error if float number is given"""
+        """Test if the function raises an error if number is float"""
         with self.assertRaises(TypeError):
             primenum(56.58)
 
     def test_if_input_is_negative(self):
-    	"""Tests if it accepts negative numbers"""
-    	self.assertEquals(primenum(-5), "Numbers less than or equal to zero are not allowed!")
+        """Tests if it accepts negative numbers"""
+        self.assertEquals(primenum(-5), "Numbers less than or equal to zero are not allowed!")
 
     def test_if_input_is_one(self):
-    	"""Tests if one is a prime number"""
-    	self.assertEquals(primenum(1), "One is not considered prime number")
+        """Tests if one is a prime number"""
+        self.assertEquals(primenum(1), "One is not considered prime number")
 
     def test_if_input_is_zero(self):
-    	"""Tests if zero is a prime number"""
-    	self.assertEquals(primenum(0), "Numbers less than or equal to zero are not allowed!")
+        """Tests if zero is a prime number"""
+        self.assertEquals(primenum(0), "Numbers less than or equal to zero are not allowed!")
 
     def test_if_it_outputs_correct_output(self):
-    	"""Tests if it outputs correct result"""
-    	self.assertEquals(primenum(5), [2, 3, 5])
+        """Tests if it outputs correct result"""
+        self.assertEquals(primenum(5), [2, 3, 5])
 
     def test_if_it_outputs_correct_output_for_numbers_greater_than_50(self):
-    	"""Tests if it outputs correct result"""
-    	self.assertEquals(len(primenum(55)), 16)
+        """Tests if it outputs correct result for numbers greater than 50"""
+        self.assertEquals(len(primenum(55)), 16)
 
     def test_if_it_includes_a_number_included_in_list(self):
-    	"""Tests if a number is prime is included in the list"""
-    	self.assertIn(5, primenum(5))
+        """Tests if a number is prime is included in the list"""
+        self.assertIn(5, primenum(5))
 
     def test_if_it_includes_a_number_if_the_number_is(self):
-    	"""Tests the input number is not prime is included in the list"""
-    	self.assertNotIn(16, primenum(16))
+        """Tests the input number is not prime is included in the list"""
+        self.assertNotIn(16, primenum(16))
+
 
 
   
